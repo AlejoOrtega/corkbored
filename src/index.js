@@ -6,11 +6,23 @@ import reportWebVitals from './reportWebVitals';
 
 import {BrowserRouter} from 'react-router-dom' // Add client navigation
 
+import {configureStore} from '@reduxjs/toolkit'
+import {Provider} from 'react-redux'
+import userReducer from './components/stores/user'
+
+const store = configureStore({
+  reducer: {
+    user : userReducer
+  }
+})
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>, 
   document.getElementById("root")
 );

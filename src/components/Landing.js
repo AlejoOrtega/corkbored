@@ -9,7 +9,7 @@ const Landing = () => {
         <div className='box center'>
             <img src= {memory} alt='Landing memory'/>
             <SignIn /> 
-            <Home />
+            {/* <Home /> */}
         </div>
     );
 }

@@ -1,17 +1,23 @@
 {
-    "memories" : [
-        {
-        "id": 1,
-        "image" : "https://m.media-amazon.com/images/M/MV5BMTQ1MDk1NDYwMF5BMl5BanBnXkFtZTgwNjE4MDIyMjE@._V1_FMjpg_UX1000_.jpg", 
-        "caption" : "caption is friends", 
-        "audio": "a good song",
-        "userId" : "userId"
-        }
-    ],
-    "users" : {
-        "userId": {
-            "userName" : "testUsername",
-            "password" : "TestPassword"
-        }
+  "memories": [
+    {
+      "id": 1,
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ1MDk1NDYwMF5BMl5BanBnXkFtZTgwNjE4MDIyMjE@._V1_FMjpg_UX1000_.jpg",
+      "caption": "caption is friends",
+      "audio": "a good song",
+      "userId": "userId"
     }
+  ],
+  "users": [
+    {
+      "id": "a008dc81-e8eb-40c3-99c6-df0410ec2be9",
+      "username": "alex",
+      "password": "enero"
+    },
+    {
+      "id": "ab9ad6cc-3f81-4a6e-9aa6-921a2c24d5b7",
+      "username": "gosuto",
+      "password": "enero"
+    }
+  ]
 }

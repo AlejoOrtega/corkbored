@@ -6,7 +6,6 @@ import Home from './Home';
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
-  const [newUser, setNewUser] = useState({})
   return (
     <div className='main'>
       <Routes>

@@ -1,12 +1,12 @@
-import { Button, TextField } from '@mui/material';
 import React from 'react';
 
-const LoginForm = () => {
+const LoginForm = ({formData, onChangeForm, onSubmitForm}) => {
+    const {username, password} = formData
     return (   
-        <form className='form'>
-            <TextField id="outlined-basic" label="Username" variant='filled' />
-            <TextField id="outlined-basic" label="Password" variant='filled' />
-            <Button variant='contained'>Submit</Button>
+        <form className='form' onSubmit={onSubmitForm}>
+            <input name='username' type='text' placeholder='username' value={username} onChange={onChangeForm}/>
+            <input name='password' type='password' placeholder='password' value={password} onChange={onChangeForm}/>
+            <button>Log In</button>
         </form>
         );
 }
