@@ -1,22 +1,37 @@
-import React, {useState, useEffect} from "react"; 
+import React, {useEffect} from "react"; 
+
+//fetch
+import { get } from './fetch/fetchs'
+
+//Redux
+import { useSelector, useDispatch } from "react-redux";
+import {update} from './stores/memories'
+
+//Components
 import Body from "./Body"; 
 import Header from "./Header"; 
 import Footer from "./Footer"
 
 
 function Home (){
-    const [memories, setMemories] = useState([])
-    const baseUrl = "http://localhost:3000"
+
+    //const baseUrl = "http://localhost:3000" Please look inside of /fetch/fetchs.js
+    const dispatch = useDispatch()
+    const user = useSelector((state)=> state.user.value)
+
     useEffect(() => {
-        fetch(baseUrl + "/memories")
-            .then(r => r.json())
-            .then(memoryData => setMemories(memoryData))
+        const fetchData = async () => {
+            let memories = await get('memories')
+            let userMemories = memories.filter((memory)=> memory.userId === user.id)
+            dispatch(update({userMemories}))
+        }
+        fetchData()
     }, [])
     
     return (
         <div>
             <Header /> 
-            <Body memories={memories}/>
+            <Body />
             <Footer />
         </div>
        

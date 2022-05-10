@@ -3,6 +3,9 @@ import React, {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom'
 //fetch
 import {get} from './fetch/fetchs'
+//Redux
+import { useDispatch } from 'react-redux'
+import {login} from './stores/user';
 
 //components
 import LoginForm from './forms/LoginForm';
@@ -15,6 +18,7 @@ const Signin = () => {
         password:''
     })
     const navigate = useNavigate()
+    const dispatch = useDispatch()
 
     const handleOnChangeForm = (e) => {
         let name = e.target.name, value= e.target.value
@@ -25,7 +29,8 @@ const Signin = () => {
         e.preventDefault()
         for (const user of existingUsers) {
             if(formData.username === user.username && formData.password === user.password){
-                navigate('/memories')
+                dispatch(login({id: user.id, username: user.username, password: user.password}))
+                navigate('/home/memories')
                 break;
             }
         }

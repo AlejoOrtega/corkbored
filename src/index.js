@@ -9,10 +9,12 @@ import {BrowserRouter} from 'react-router-dom' // Add client navigation
 import {configureStore} from '@reduxjs/toolkit'
 import {Provider} from 'react-redux'
 import userReducer from './components/stores/user'
+import memoriesReducer from './components/stores/memories'
 
 const store = configureStore({
   reducer: {
-    user : userReducer
+    user : userReducer,
+    memories : memoriesReducer
   }
 })
 

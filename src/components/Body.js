@@ -1,15 +1,14 @@
 import React from "react";
 import MemoriesList from "./MemoriesList"
-import NewMemoryForm from "./NewMemoryForm"; 
+import {Outlet} from 'react-router-dom'
 
 function Body ({memories}) {
-   
     
-   
     return (
         <div>
-            <NewMemoryForm />
-            <MemoriesList memories={memories}/> 
+            {/* <MemoriesList memories={memories}/>  */}
+            {/* This component help to change content depende of the route #yekes */}
+            <Outlet /> 
         </div>
     )
 }
