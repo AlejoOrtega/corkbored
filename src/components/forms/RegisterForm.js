@@ -3,6 +3,7 @@ import {Button, TextField} from '@mui/material'
 
 const RegisterForm = () => {
 
+    let test = 'this is a formal git test. delete me when you can :)'
     const [formData, setFormData] = useState({
         username: '',
         password: '',
