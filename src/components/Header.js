@@ -6,9 +6,9 @@ import user from '../resources/user.png'
 
 function Header () {
     return (
-        <div className="nav">
+        <div className="header">
             <h1>Cork-bored</h1>
-            <input type='text' placeholder="Search a memory..."/>
+            <input className="header-input" type='text' placeholder="Search a memory..."/>
             <nav>
                 <NavLink to='memories'>
                     <img className="nav-icon" src={home} alt='home icon'/>

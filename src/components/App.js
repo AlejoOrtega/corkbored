@@ -18,7 +18,7 @@ function App() {
   const memories = useSelector((state)=> state.memories.value)
   console.log(memories)
   return (
-    <div className=''>
+    <div className='main'>
       <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='register' element={<Register />} />

@@ -5,10 +5,13 @@ import memory from '../resources/memories.jpeg'
 
 const Landing = () => {
     return ( 
-        <div className='box center'>
-            <img src= {memory} alt='Landing memory'/>
-            <SignIn /> 
+        <div className='sub-main'>
+            <div className='box center'>
+                <img src= {memory} alt='Landing memory'/>
+                <SignIn /> 
+            </div>
         </div>
+        
     );
 }
  

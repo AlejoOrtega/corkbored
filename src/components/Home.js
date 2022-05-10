@@ -29,10 +29,12 @@ function Home (){
     }, [])
     
     return (
-        <div>
+        <div className="content">
+            <div className="content-adjustment">
             <Header /> 
             <Body />
             <Footer />
+            </div>
         </div>
        
     )

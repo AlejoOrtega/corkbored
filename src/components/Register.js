@@ -64,9 +64,12 @@ const Register = () => {
     }
 
     return ( 
-    <div className='register-box'>
-        <RegisterForm formData={formData} checkPassword={checkPassword} onChangeForm={handleOnChangeForm} onSubmitForm={handleOnSubmitForm}/>
-    </div> 
+    <div className='sub-main'>
+        <div className='register-box'>
+            <RegisterForm formData={formData} checkPassword={checkPassword} onChangeForm={handleOnChangeForm} onSubmitForm={handleOnSubmitForm}/>
+        </div> 
+    </div>
+    
     );
 }
  
