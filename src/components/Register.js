@@ -47,11 +47,7 @@ const Register = () => {
                 password:formData.password
             }
 
-<<<<<<< HEAD
-            if(post('users', user)){
-=======
             if(post('users',user)){
->>>>>>> d626f6127e361adb6235f1c69854c0c487c9ccb1
 
                 dispatch(login({id: user.id, username: user.username, password: user.password}))
                 navigate('/home/memories')

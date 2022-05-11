@@ -1,4 +1,11 @@
 import React, {useState} from "react"; 
+
+// fetch 
+import {post} from "./fetch/fetchs"; 
+
+//Redux
+import { useSelector, useDispatch } from "react-redux";
+import {memories} from "./stores/memories"
  
 function NewMemoryForm ({}) {
      const [memoryCaption, setMemoryCaption] = useState("")
@@ -18,18 +25,21 @@ function NewMemoryForm ({}) {
     }
     
     return (
-         <div>
-            <form onSubmit={e=> handleNewMemoryFormSubmit(e)}>Post New Memory: 
-                <label>Caption
+         <div className="content">
+             <div className="register-box">
+                 <form onSubmit={e=> handleNewMemoryFormSubmit(e)} className="form">Post New Memory: 
+                <label>Caption: 
                     <input type="text" onChange={e => setMemoryCaption(e.target.value)} value={memoryCaption}></input>
                 </label>
-                <label>Image
+                <label>Image: 
                     <input type="text" onChange={e => setMemoryImage(e.target.value)} value={memoryImage}></input>
                 </label>
-                <label>Audio
+                <label>Audio: 
                     <input type="text" onChange={e => setMemoryAudio(e.target.value)} value={memoryAudio}></input>
                 </label>
+                <button>Submit</button>
             </form>
+             </div>
          </div>
      )
  }
