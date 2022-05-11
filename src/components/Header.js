@@ -13,7 +13,7 @@ function Header () {
                 <NavLink to='memories'>
                     <img className="nav-icon" src={home} alt='home icon'/>
                 </NavLink>
-                <NavLink to='newMemory'>
+                <NavLink to='new'>
                     <img className="nav-icon" src={add} alt='add icon'/>
                 </NavLink>
                 <NavLink to='memories'>

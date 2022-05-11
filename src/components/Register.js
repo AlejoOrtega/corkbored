@@ -47,7 +47,7 @@ const Register = () => {
                 password:formData.password
             }
 
-            if(post(user)){
+            if(post('users',user)){
 
                 dispatch(login({id: user.id, username: user.username, password: user.password}))
                 navigate('/home/memories')

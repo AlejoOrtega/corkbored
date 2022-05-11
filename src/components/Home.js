@@ -31,9 +31,9 @@ function Home (){
     return (
         <div className="content">
             <div className="content-adjustment">
-            <Header /> 
-            <Body />
-            <Footer />
+                <Header /> 
+                <Body />
+                <Footer />
             </div>
         </div>
        
