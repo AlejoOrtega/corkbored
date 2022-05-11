@@ -1,11 +1,11 @@
 import React, {useEffect} from "react"; 
 
 //fetch
-import { get } from './fetch/fetchs'
+import { get } from './fetch/fetchs';
 
 //Redux
 import { useSelector, useDispatch } from "react-redux";
-import {update} from './stores/memories'
+import {update} from './stores/memories';
 
 //Components
 import Body from "./Body"; 

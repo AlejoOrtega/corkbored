@@ -16,6 +16,7 @@ function NewMemoryForm ({}) {
             .then(r => r.json())
             .then(newItem => newItem())
     }
+    
     return (
          <div>
             <form onSubmit={e=> handleNewMemoryFormSubmit(e)}>Post New Memory: 
