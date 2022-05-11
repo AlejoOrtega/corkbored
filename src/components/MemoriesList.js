@@ -1,4 +1,9 @@
 import React from "react"; 
+
+// fetch
+import {post} from "./fetch/fetchs"
+
+// components
 import Memory from "./Memory"; 
 
 function MemoriesList ({memories}) {

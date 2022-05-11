@@ -10,7 +10,7 @@ import {update} from './stores/memories'
 //Components
 import Body from "./Body"; 
 import Header from "./Header"; 
-import Footer from "./Footer"
+import Footer from "./Footer";
 
 
 function Home (){
@@ -26,7 +26,7 @@ function Home (){
             dispatch(update({userMemories}))
         }
         fetchData()
-    }, [])
+    }, [dispatch, user.id])
     
     return (
         <div className="content">

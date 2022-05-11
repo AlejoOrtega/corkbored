@@ -1,6 +1,6 @@
 import React from "react";
-import MemoriesList from "./MemoriesList"
-import {Outlet} from 'react-router-dom'
+import MemoriesList from "./MemoriesList";
+import {Outlet} from 'react-router-dom'; 
 
 function Body ({memories}) {
     

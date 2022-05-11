@@ -11,7 +11,7 @@ const RegisterForm = ({formData, onChangeForm, onSubmitForm, checkPassword}) => 
         <form className='form' onSubmit={onSubmitForm}>
             <input name='username' type='text' placeholder='username' value={username} onChange={onChangeForm}/>
             <input name='password' type='password' placeholder='password' value={password} onChange={onChangeForm}/>
-            <input name='repeatPassword' type='password' placeholder='password' value={repeatPassword} onChange={onChangeForm}/>
+            <input name='repeatPassword' type='password' placeholder='repeat password' value={repeatPassword} onChange={onChangeForm}/>
             {checkPassword? <p>Passwords are not equal</p> : null}
             <button>Submit</button>
         </form>

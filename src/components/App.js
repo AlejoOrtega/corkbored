@@ -24,7 +24,7 @@ function App() {
           <Route path='register' element={<Register />} />
           <Route path='home' element={<Home />} >
             <Route path='memories' element={ <MemoriesList memories={memories.userMemories}/> } />
-            <Route path='newMemory' element={ <NewMemoryForm/> } />
+            <Route path='new' element={ <NewMemoryForm/> } />
           </Route>
       </Routes>
     </div>
