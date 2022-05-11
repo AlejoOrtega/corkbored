@@ -100,9 +100,11 @@ code {
   height: 30px;
   width: 30px;
 }
-.form {
+.form > *{
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
+  
 }
 .memory-list-content {
   width: 100%;
@@ -129,4 +131,18 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.new-form-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.form-adjustment{
+  width: 80%;
+  height: 50px;
+  display: flex;
 }

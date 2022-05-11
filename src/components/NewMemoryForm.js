@@ -25,21 +25,22 @@ function NewMemoryForm ({}) {
     }
     
     return (
-         <div className="content">
-             <div className="register-box">
-                 <form onSubmit={e=> handleNewMemoryFormSubmit(e)} className="form">Post New Memory: 
-                <label>Caption: 
-                    <input type="text" onChange={e => setMemoryCaption(e.target.value)} value={memoryCaption}></input>
-                </label>
-                <label>Image: 
-                    <input type="text" onChange={e => setMemoryImage(e.target.value)} value={memoryImage}></input>
-                </label>
-                <label>Audio: 
-                    <input type="text" onChange={e => setMemoryAudio(e.target.value)} value={memoryAudio}></input>
-                </label>
-                <button>Submit</button>
-            </form>
-             </div>
+         <div className="new-form-content">
+             <h3>Post New Memory</h3>
+             <div className="form-adjustment">
+                 <form onSubmit={e=> handleNewMemoryFormSubmit(e)} className="form"> 
+                    <label>Caption: 
+                        <input type="text" onChange={e => setMemoryCaption(e.target.value)} value={memoryCaption}></input>
+                    </label>
+                    <label>Image: 
+                        <input type="text" onChange={e => setMemoryImage(e.target.value)} value={memoryImage}></input>
+                    </label>
+                    <label>Audio: 
+                        <input type="text" onChange={e => setMemoryAudio(e.target.value)} value={memoryAudio}></input>
+                    </label>
+                    <button>Submit</button>
+                </form>
+            </div>
          </div>
      )
  }
