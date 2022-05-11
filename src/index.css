@@ -90,11 +90,43 @@ code {
   width: 30%;
   height: 30px;
 }
+.nav-content {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .nav-icon {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
 }
 .form {
   display: flex;
   flex-direction: column;
+}
+.memory-list-content {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+.memory-content {
+  margin: 5%;
+}
+.memory-image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.memory-image {
+  width: 70%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

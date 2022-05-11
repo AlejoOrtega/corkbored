@@ -2,7 +2,10 @@ import React from "react";
 
 function Footer () {
     return (
-        <h1>footer</h1>
+        <div className="footer-content">
+            <p>© 2022 CORKBORED FROM BELLA * ALEX</p>
+        </div>
+        
     )
 }
 

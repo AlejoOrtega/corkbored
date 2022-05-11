@@ -5,8 +5,11 @@ function Memory ({memory, memory: {id, caption, image, audio, userId}}) {
 
         
     return (
-        <div>
-            <img src={image} alt={caption}></img>
+        <div className='memory-content'>
+            <div className="memory-image-container">
+                <img className='memory-image' src={image} alt={caption}/>
+            </div>
+            
             <p>{caption}</p>
             <p>associated audio: {audio}</p>
             <NewCommentsForm /> 

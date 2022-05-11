@@ -27,6 +27,7 @@ const Signin = () => {
 
     const handleOnSubmitForm = (e) => {
         e.preventDefault()
+        let check = false
         for (const user of existingUsers) {
             if(formData.username === user.username && formData.password === user.password){
                 dispatch(login({id: user.id, username: user.username, password: user.password}))
@@ -34,6 +35,7 @@ const Signin = () => {
                 break;
             }
         }
+        
     }
 
 

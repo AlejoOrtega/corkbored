@@ -8,10 +8,13 @@ export const memoriesSlice = createSlice({
     reducers:{
         update:(state, action) => {
             state.value = action.payload
+        },
+        cleanMemories:(state) => {
+            state.value = initialState
         }
     }
 })
 
-export const {update} = memoriesSlice.actions
+export const {update, cleanMemories} = memoriesSlice.actions
 
 export default memoriesSlice.reducer;
