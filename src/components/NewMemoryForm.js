@@ -3,40 +3,61 @@ import React, {useState} from "react";
 // fetch 
 import {post} from "./fetch/fetchs"; 
 
+//navigation
+import { useNavigate } from "react-router-dom";
+
 //Redux
 import { useSelector, useDispatch } from "react-redux";
-import {memories} from "./stores/memories"
+import { triggerUpdate } from "./stores/update"
  
-function NewMemoryForm ({}) {
-     const [memoryCaption, setMemoryCaption] = useState("")
-     const [memoryImage, setMemoryImage] = useState("")
-     const [memoryAudio, setMemoryAudio] = useState("")
+const NewMemoryForm = () => {
+    const user = useSelector((state) => state.user.value)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const [formData, setFormData] = useState({
+        memoryCaption : '',
+        memoryImage : '',
+        memoryAudio : '',
+    })
+
+    const handleFormData = (e) => {
+        let name = e.target.name, value = e.target.value;
+        setFormData({...formData, [name]:value})
+    }
+
     const handleNewMemoryFormSubmit = (e)  => {
         e.preventDefault(); 
-        const newItem = {
-            caption: memoryCaption, 
-            image: memoryImage, 
-            audio: memoryAudio,
+        const newMemory = {
+            caption: formData.memoryCaption, 
+            image: formData.memoryImage, 
+            audio: formData.memoryAudio,
+            userId: user.id,
+            notes: []
         }
-        fetch("http://localhost:3000/memories", {
-        })
-            .then(r => r.json())
-            .then(newItem => newItem())
+        
+        if(post('memories', newMemory)){
+            dispatch(triggerUpdate())
+            navigate('/home/memories')
+        }else{
+
+        }
+        
     }
     
     return (
          <div className="new-form-content">
              <h3>Post New Memory</h3>
              <div className="form-adjustment">
-                 <form onSubmit={e=> handleNewMemoryFormSubmit(e)} className="form"> 
+                 <form onSubmit={handleNewMemoryFormSubmit} className="form"> 
                     <label>Caption: 
-                        <input type="text" onChange={e => setMemoryCaption(e.target.value)} value={memoryCaption}></input>
+                        <input name="memoryCaption" type="text" onChange={handleFormData} value={formData.memoryCaption}></input>
                     </label>
                     <label>Image: 
-                        <input type="text" onChange={e => setMemoryImage(e.target.value)} value={memoryImage}></input>
+                        <input name="memoryImage" type="text" onChange={handleFormData} value={formData.memoryImage}></input>
                     </label>
                     <label>Audio: 
-                        <input type="text" onChange={e => setMemoryAudio(e.target.value)} value={memoryAudio}></input>
+                        <input name="memoryAudio" type="text" onChange={handleFormData} value={formData.memoryAudio}></input>
                     </label>
                     <button>Submit</button>
                 </form>

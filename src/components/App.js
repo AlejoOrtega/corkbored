@@ -16,14 +16,13 @@ import {useSelector} from 'react-redux'
 
 function App() {
   const memories = useSelector((state)=> state.memories.value)
-  console.log(memories)
   return (
     <div className='main'>
       <Routes>
           <Route path='/' element={<Landing />} />
           <Route path='register' element={<Register />} />
           <Route path='home' element={<Home />} >
-            <Route path='memories' element={ <MemoriesList memories={memories.userMemories}/> } />
+            <Route path='memories' element={ <MemoriesList memories={memories}/> } />
             <Route path='new' element={ <NewMemoryForm/> } />
           </Route>
       </Routes>

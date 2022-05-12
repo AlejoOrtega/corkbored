@@ -18,15 +18,15 @@ function Home (){
     //const baseUrl = "http://localhost:3000" Please look inside of /fetch/fetchs.js
     const dispatch = useDispatch()
     const user = useSelector((state)=> state.user.value)
+    const triggerUpdate = useSelector((state) => state.update.value)
 
     useEffect(() => {
         const fetchData = async () => {
             let memories = await get('memories')
-            let userMemories = memories.filter((memory)=> memory.userId === user.id)
-            dispatch(update({userMemories}))
+            dispatch(update(memories.filter((memory)=> memory.userId === user.id)))
         }
         fetchData()
-    }, [dispatch, user.id])
+    }, [triggerUpdate/*dispatch, user.id*/])
     
     return (
         <div className="content">

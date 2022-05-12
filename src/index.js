@@ -10,11 +10,13 @@ import {configureStore} from '@reduxjs/toolkit'
 import {Provider} from 'react-redux'
 import userReducer from './components/stores/user'
 import memoriesReducer from './components/stores/memories'
+import updateReducer from './components/stores/update'
 
 const store = configureStore({
   reducer: {
     user : userReducer,
-    memories : memoriesReducer
+    memories : memoriesReducer,
+    update : updateReducer
   }
 })
 
