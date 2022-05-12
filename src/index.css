@@ -126,11 +126,16 @@ code {
 .memory-image {
   width: 70%;
 }
+.memory-delete-button {
+  background-color: red;
+  color: white;
+}
 
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: black;
 }
 
 .new-form-content {
