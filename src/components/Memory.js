@@ -20,7 +20,7 @@ function Memory ({memory: {id, caption, image, audio, userId, notes}}) {
             </div>
             
             <p>{caption}</p>
-            <link href={audio}>[associated audio]</link>
+            <a href={audio}>[associated audio]</a>
             <NewCommentsForm key={uuid()} memoryId={id} notesList={notes}/>
             
             
